@@ -317,7 +317,7 @@
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
@@ -331,40 +331,702 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!--BibTex citation -->
-  <!-- <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section> -->
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">LIVEVQA-TOOLBOX</h2>
+        <img src="static/images/qa_gen_pipeline-1.png" width="100%" alt="environment infrastructure" class="responsive-image">
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            We develop LiveVQA-Toolbox, a comprehensive toolkit that continuously harvests fresh visual content from diverse online sources to facilitate automated visual knowledge collection. As shown in the figure above, the toolbox automates the entire data acquisition workflow: from crawling prominent news outlets across different countries, to processing complex image-text interleaved documents, to extracting the most representative visual content from news articles, video platforms, and academic. 
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Agent-driven Crawler Generation System</h2>
+        <img src="static/images/crawler-pipeline-new-1.png" width="100%" alt="environment infrastructure" class="responsive-image">
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            When adding a new source, the system first analyzes the page structure and models content elements (title, date, text, images, captions). A coding agent then generates modular extraction scripts with appropriate configurations, which are deployed into a sandboxed environment for trial-run validation. The system automatically verifies successful access, article scraping, timestamp retrieval, and image downloading. If errors occur, the agent iteratively debugs based on error messages until all checks pass, after which the crawler is seamlessly integrated with regular monitoring.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">LIVEVQA-W(ORLDWIDE)</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+            Below we present an overview of the main statistics of LIVEVQA-W, showcasing its composition across different data sources and splits. LIVEVQA-W contains a total of 171,105 unique visual entities, 234,286 images, and 872,896 corresponding questions with full multilingual context.
+          </p>
+        </div>
+        <div class="table-container" style="margin-bottom: 20px;">
+          <table class="table is-hoverable is-striped is-bordered" style="margin: 0 auto; background-color: rgba(0,0,0,0); width: 100%; text-align: center;">
+            <thead>
+              <tr>
+                <th style="text-align: center;">Category</th>
+                <th>Images</th>
+                <th>#Question</th>
+                <th>Level 1</th>
+                <th>Level 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" style="text-align: center; font-weight: bold; font-style: italic;">Dataset</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">News</td>
+                <td>172,981</td>
+                <td>657,936</td>
+                <td>162,720</td>
+                <td>495,216</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Videos</td>
+                <td>45,612</td>
+                <td>167,881</td>
+                <td>41,149</td>
+                <td>126,732</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Papers</td>
+                <td>15,693</td>
+                <td>47,079</td>
+                <td>15,693</td>
+                <td>31,386</td>
+              </tr>
+              
+              <tr>
+                <td colspan="5" style="border-top: 2px solid #dbdbdb;"></td>
+              </tr>
+              
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Avg. per Picture</td>
+                <td>1</td>
+                <td>3.73</td>
+                <td>0.94</td>
+                <td>2.78</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Overall</td>
+                <td>234,286</td>
+                <td>872,896</td>
+                <td>219,562</td>
+                <td>653,334</td>
+              </tr>
+              
+              <tr>
+                <td colspan="5" style="border-top: 2px solid #dbdbdb;"></td>
+              </tr>
+              
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Test Split</td>
+                <td>500</td>
+                <td>500</td>
+                <td>250</td>
+                <td>250</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Training Split</td>
+                <td>9,605</td>
+                <td>35,266</td>
+                <td>8,949</td>
+                <td>26,317</td>
+              </tr>
+              
+              <tr>
+                <td colspan="5" style="border-top: 2px solid #dbdbdb;"></td>
+              </tr>
+              
+              <tr>
+                <td colspan="5" style="text-align: center; font-weight: bold; font-style: italic;">Benchmark</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">News</td>
+                <td>196</td>
+                <td>200</td>
+                <td>100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Videos</td>
+                <td>195</td>
+                <td>200</td>
+                <td>100</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; text-align: center;">Papers</td>
+                <td>95</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered">Benchmark Display</h2>
+
+
+        <div class="columns">
+          <div class="column is-half">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image" style="width: 320px; height: 240px; margin: auto;">
+                  <img src="static/images/almayadeen_b7c6e5ea55ae581e8299f81f0f525baf.jpg" alt="Example Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media has-text-centered">
+                  <div class="media-content">
+                    <p class="title is-4">Example 1: Arabic</p>
+                  </div>
+                </div>
+                <div class="content" style="margin-bottom: 1.2em;">
+                  <strong>Level 1 Question:</strong>
+                  <p>استنادًا إلى هذه الصورة، ما هو التاريخ الذي صرح فيه أعضاء الوفد بتصريحاتهم من القصر؟ (بدقة إلى اليوم والشهر والسنة)</p>
+                  <ul style="margin-bottom: 0.5em;">
+                    <li>A. 31 أغسطس 2025</li>
+                    <li>B. 26 أغسطس 2025</li>
+                    <li>C. 27 أغسطس 2025</li>
+                    <li>D. 25 أغسطس 2025</li>
+                  </ul>
+                  <strong>Ground Truth:</strong> B
+                </div>
+              </div>
+              <div class="card-image">
+                <figure class="image" style="width: 320px; height: 240px; margin: auto;">
+                  <img src="static/images/elwatan_b1610e7a0190a35e213375f47267a5c7.jpg" alt="Example Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <strong>Level 2 Question:</strong>
+                  <p>في الصورة، نقاش حول الخطة الاستثمارية. ما هو العام المالي المحدد لذلك؟</p>
+                  <ul style="margin-bottom: 0.5em;">
+                    <li>A. 2025-2026</li>
+                    <li>B. 2024-2025</li>
+                    <li>C. 2026-2027</li>
+                  </ul>
+                  <strong>Ground Truth:</strong> A
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image" style="width: 320px; height: 240px; margin: auto;">
+                  <img src="static/images/ifeng_a84a1186f5a1a94d345b2035464cb2f7.jpg" alt="Example Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media has-text-centered">
+                  <div class="media-content">
+                    <p class="title is-4">Example 2: Chinese</p>
+                  </div>
+                </div>
+                <div class="content" style="margin-bottom: 1.2em;">
+                  <strong>Level 1 Question:</strong>
+                  <p>基于这个图像，火灾发生在哪里（精确到市）？</p>
+                  <ul style="margin-bottom: 0.5em;">
+                    <li>A. 太原市</li>
+                    <li>B. 吕梁市</li>
+                    <li>C. 长治市</li>
+                    <li>D. 大同市</li>
+                  </ul>
+                  <strong>Ground Truth:</strong> B
+                </div>
+              </div>
+              <div class="card-image">
+                <figure class="image" style="width: 320px; height: 240px; margin: auto;">
+                  <img src="static/images/nfzm_ec4801ebaf1ff5122dae5de1987dc155.jpeg" alt="Example Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <strong>Level 2 Question:</strong>
+                  <p>在图像中展示的活动举办后多少天，相关国际峰会在同一城市正式开幕？</p>
+                  <ul style="margin-bottom: 0.5em;">
+                    <li>A. 26</li>
+                    <li>B. 25</li>
+                    <li>C. 28</li>
+                    <li>D. 23</li>
+                  </ul>
+                  <strong>Ground Truth:</strong> B
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Benchmark Results for LIVEVQA-W</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            We evaluates 15 state-of-the-art Multimodal Large Language Models (MLLMs) on their ability to seek worldwide visual knowledge. Findings reveal that offline models perform poorly on complex visual factuality tasks. While search-augmented models demonstrate dramatically improved accuracy and better confidence calibration , they suffer from a severe "multilingual curse". Performance in English significantly outpaces other languages. Error analysis attributes this disparity primarily to search engine retrieval failures for non-English sources, rather than the models' intrinsic reasoning deficits.
+          </p>
+        </div>
+        <div class="table-container" style="margin-bottom: 20px;">
+          <table class="table is-hoverable is-striped is-bordered" style="margin: 0 auto; background-color: rgba(0,0,0,0); width: 100%; text-align: center;">
+            <caption style="caption-side: bottom; padding-top: 10px; font-size: 0.9em; color: #555;">Detailed breakdown of non-search and search models' performance.</caption>
+            <thead>
+              <tr>
+                <th style="text-align: center; vertical-align: middle;">Model</th>
+                <th style="text-align: center; vertical-align: middle;">Correct</th>
+                <th style="text-align: center; vertical-align: middle;">Not attempted</th>
+                <th style="text-align: center; vertical-align: middle;">Incorrect</th>
+                <th style="text-align: center; vertical-align: middle;">Correct &amp; given attempted</th>
+                <th style="text-align: center; vertical-align: middle;">F-score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="6" style="text-align: center; font-weight: bold; border-top: 2px solid #dbdbdb;"><i>w.o.</i> Search</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Claude Sonnet 4.5</td>
+                <td>3.4</td>
+                <td><strong>82.2</strong></td>
+                <td>14.4</td>
+                <td>19.1</td>
+                <td>6.0</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Gemini 3 Flash Preview</td>
+                <td>16.8</td>
+                <td>3.2</td>
+                <td><strong>80.0</strong></td>
+                <td>17.4</td>
+                <td>17.4</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Gemini 3 Pro Preview</td>
+                <td>19.8</td>
+                <td>2.8</td>
+                <td><u>77.4</u></td>
+                <td>20.4</td>
+                <td>20.6</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Gemma 3 27B</td>
+                <td>5.4</td>
+                <td>32.8</td>
+                <td>61.8</td>
+                <td>8.0</td>
+                <td>6.3</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Mistral Medium 3.1</td>
+                <td>6.8</td>
+                <td>57.0</td>
+                <td>36.2</td>
+                <td>15.8</td>
+                <td>9.3</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">GPT-5.2</td>
+                <td>5.2</td>
+                <td>73.2</td>
+                <td>21.6</td>
+                <td>19.4</td>
+                <td>8.6</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">GPT-o3</td>
+                <td>9.6</td>
+                <td>50.6</td>
+                <td>39.8</td>
+                <td>19.4</td>
+                <td>13.0</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Qwen3 VL 235B A22B Thinking</td>
+                <td>6.0</td>
+                <td>51.0</td>
+                <td>43.0</td>
+                <td>12.2</td>
+                <td>8.0</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Grok 4</td>
+                <td>8.8</td>
+                <td>40.4</td>
+                <td>50.8</td>
+                <td>14.8</td>
+                <td>10.9</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">GLM 4.6V</td>
+                <td>4.2</td>
+                <td><u>82.0</u></td>
+                <td>13.8</td>
+                <td>23.3</td>
+                <td>6.7</td>
+              </tr>
+
+              <tr>
+                <td colspan="6" style="text-align: center; font-weight: bold; border-top: 2px solid #dbdbdb;"><i>w.</i> Text &amp; Image Search</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">GPT-5.2:online</td>
+                <td><strong>35.0</strong></td>
+                <td>34.6</td>
+                <td>30.4</td>
+                <td><strong>53.5</strong></td>
+                <td><strong>42.1</strong></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">GPT-o3:online</td>
+                <td><u>30.8</u></td>
+                <td>34.4</td>
+                <td>34.8</td>
+                <td><u>47.0</u></td>
+                <td><u>37.4</u></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">MMSearch-R1</td>
+                <td>13.0</td>
+                <td>20.6</td>
+                <td>66.4</td>
+                <td>16.4</td>
+                <td>14.8</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">WebWatcher-7B</td>
+                <td>25.8</td>
+                <td>18.0</td>
+                <td>56.2</td>
+                <td>31.5</td>
+                <td>28.4</td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">WebWatcher-32B</td>
+                <td>26.6</td>
+                <td>12.2</td>
+                <td>61.2</td>
+                <td>30.3</td>
+                <td>28.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-container" style="margin-bottom: 30px;">
+          <table class="table is-hoverable is-striped is-bordered" style="margin: 0 auto; background-color: rgba(0,0,0,0); width: 100%; text-align: center;">
+            <caption style="caption-side: bottom; padding-top: 10px; font-size: 0.9em; color: #555;">
+              Accuracy (%) of different models on the News and Videos parts of the benchmark, evaluated on open-ended questions in 10 languages.
+            </caption>
+            <thead>
+              <tr>
+                <th style="text-align: center; vertical-align: middle;">Model</th>
+                <th style="text-align: center; vertical-align: middle;">Avg.</th>
+                <th style="text-align: center; vertical-align: middle;">Arabic</th>
+                <th style="text-align: center; vertical-align: middle;">Chinese</th>
+                <th style="text-align: center; vertical-align: middle;">English</th>
+                <th style="text-align: center; vertical-align: middle;">French</th>
+                <th style="text-align: center; vertical-align: middle;">German</th>
+                <th style="text-align: center; vertical-align: middle;">Indonesian</th>
+                <th style="text-align: center; vertical-align: middle;">Japanese</th>
+                <th style="text-align: center; vertical-align: middle;">Portuguese</th>
+                <th style="text-align: center; vertical-align: middle;">Russian</th>
+                <th style="text-align: center; vertical-align: middle;">Spanish</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="12" style="text-align: center; font-weight: bold; border-top: 2px solid #dbdbdb;"><i>w.o.</i> Search</td>
+              </tr>
+              <tr>
+                <td>Claude Sonnet 4.5</td>
+                <td>3.75</td>
+                <td>2.50</td>
+                <td>2.50</td>
+                <td>5.00</td>
+                <td>5.00</td>
+                <td>2.50</td>
+                <td>2.50</td>
+                <td>2.50</td>
+                <td>5.00</td>
+                <td>7.50</td>
+                <td>2.50</td>
+              </tr>
+              <tr>
+                <td>Gemini 3 Flash Preview</td>
+                <td>17.50</td>
+                <td><strong>15.00</strong></td>
+                <td>17.50</td>
+                <td>15.00</td>
+                <td>15.00</td>
+                <td>20.00</td>
+                <td><strong>15.00</strong></td>
+                <td><strong>20.00</strong></td>
+                <td><strong>22.50</strong></td>
+                <td>22.50</td>
+                <td>12.50</td>
+              </tr>
+              <tr>
+                <td>Gemini 3 Pro Preview</td>
+                <td><strong>19.50</strong></td>
+                <td>7.50</td>
+                <td><strong>25.00</strong></td>
+                <td><strong>17.50</strong></td>
+                <td><strong>20.00</strong></td>
+                <td><strong>25.00</strong></td>
+                <td><strong>15.00</strong></td>
+                <td><strong>20.00</strong></td>
+                <td><strong>22.50</strong></td>
+                <td><strong>25.00</strong></td>
+                <td><strong>17.50</strong></td>
+              </tr>
+              <tr>
+                <td>Gemma 3 27B</td>
+                <td>4.00</td>
+                <td>5.00</td>
+                <td>0.00</td>
+                <td>2.50</td>
+                <td>2.50</td>
+                <td>5.00</td>
+                <td>0.00</td>
+                <td>2.50</td>
+                <td>7.50</td>
+                <td>7.50</td>
+                <td>7.50</td>
+              </tr>
+              <tr>
+                <td>Mistral Medium 3.1</td>
+                <td>6.25</td>
+                <td>10.00</td>
+                <td>10.00</td>
+                <td>10.00</td>
+                <td>5.00</td>
+                <td>2.50</td>
+                <td>5.00</td>
+                <td>0.00</td>
+                <td>7.50</td>
+                <td>5.00</td>
+                <td>7.50</td>
+              </tr>
+              <tr>
+                <td>GPT-5.2</td>
+                <td>4.75</td>
+                <td>5.00</td>
+                <td>10.00</td>
+                <td>0.00</td>
+                <td>5.00</td>
+                <td>5.00</td>
+                <td>2.50</td>
+                <td>5.00</td>
+                <td>2.50</td>
+                <td>5.00</td>
+                <td>7.50</td>
+              </tr>
+              <tr>
+                <td>GPT-o3</td>
+                <td>9.00</td>
+                <td>10.00</td>
+                <td>7.50</td>
+                <td>7.50</td>
+                <td>17.50</td>
+                <td>5.00</td>
+                <td>7.50</td>
+                <td>7.50</td>
+                <td>7.50</td>
+                <td>7.50</td>
+                <td>12.50</td>
+              </tr>
+              <tr>
+                <td>Qwen3 VL 235B A22B Thinking</td>
+                <td>4.75</td>
+                <td>5.00</td>
+                <td>7.50</td>
+                <td>2.50</td>
+                <td>7.50</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>5.00</td>
+                <td>12.50</td>
+                <td>7.50</td>
+              </tr>
+              <tr>
+                <td>Grok 4</td>
+                <td>8.75</td>
+                <td>5.00</td>
+                <td>10.00</td>
+                <td>10.00</td>
+                <td>7.50</td>
+                <td>15.00</td>
+                <td>5.00</td>
+                <td>10.00</td>
+                <td>10.00</td>
+                <td>10.00</td>
+                <td>5.00</td>
+              </tr>
+              <tr>
+                <td>GLM 4.6V</td>
+                <td>3.75</td>
+                <td>2.50</td>
+                <td>2.50</td>
+                <td>5.00</td>
+                <td>5.00</td>
+                <td>2.50</td>
+                <td>0.00</td>
+                <td>5.00</td>
+                <td>5.00</td>
+                <td>7.50</td>
+                <td>2.50</td>
+              </tr>
+
+              <tr>
+                <td colspan="12" style="text-align: center; font-weight: bold; border-top: 2px solid #dbdbdb;"><i>w.</i> Text &amp; Image Search</td>
+              </tr>
+              <tr>
+                <td>GPT-5.2:online</td>
+                <td><strong>26.25</strong></td>
+                <td>25.00</td>
+                <td><strong>32.50</strong></td>
+                <td>40.00</td>
+                <td>22.50</td>
+                <td>20.00</td>
+                <td>22.50</td>
+                <td>15.00</td>
+                <td>22.50</td>
+                <td>27.50</td>
+                <td><strong>35.00</strong></td>
+              </tr>
+              <tr>
+                <td>GPT-o3:online</td>
+                <td>25.75</td>
+                <td><strong>30.00</strong></td>
+                <td>25.00</td>
+                <td>35.00</td>
+                <td>20.00</td>
+                <td>22.50</td>
+                <td>17.50</td>
+                <td><strong>22.50</strong></td>
+                <td><strong>25.00</strong></td>
+                <td><strong>30.00</strong></td>
+                <td>30.00</td>
+              </tr>
+              <tr>
+                <td>MMSearch-R1</td>
+                <td>10.50</td>
+                <td>15.00</td>
+                <td>7.50</td>
+                <td>22.50</td>
+                <td>0.00</td>
+                <td>17.50</td>
+                <td>2.50</td>
+                <td>2.50</td>
+                <td>20.00</td>
+                <td>7.50</td>
+                <td>10.00</td>
+              </tr>
+              <tr>
+                <td>WebWatcher-7B</td>
+                <td>23.00</td>
+                <td>20.00</td>
+                <td>22.50</td>
+                <td>47.50</td>
+                <td><strong>27.50</strong></td>
+                <td>20.00</td>
+                <td>22.50</td>
+                <td>12.50</td>
+                <td>20.00</td>
+                <td>12.50</td>
+                <td>25.00</td>
+              </tr>
+              <tr>
+                <td>WebWatcher-32B</td>
+                <td>24.75</td>
+                <td>17.50</td>
+                <td>15.00</td>
+                <td><strong>55.00</strong></td>
+                <td>25.00</td>
+                <td><strong>30.00</strong></td>
+                <td><strong>25.00</strong></td>
+                <td>17.50</td>
+                <td><strong>25.00</strong></td>
+                <td>10.00</td>
+                <td>27.50</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!--BibTex citation -->
+    <!-- <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+    title={Your Paper Title Here},
+    author={First Author and Second Author and Third Author},
+    journal={Conference/Journal Name},
+    year={2024},
+    url={https://your-domain.com/your-project-page}
+  }</code></pre>
+      </div>
+  </section> -->
+  <!--End BibTex citation -->
+
+
+    <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
 
         </div>
       </div>
