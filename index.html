@@ -594,7 +594,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3">Benchmark Results for LIVEVQA-W</h2>
+        <h2 class="title is-3">Benchmark Results</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
@@ -991,6 +991,207 @@
     </div>
   </div>
 </section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  /* 纵向排布容器 */
+  .findings-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 2rem auto;
+    width: 100%;
+  }
+
+  /* 每一个独立的卡片 */
+  .finding-v-card {
+    background: #f5f7fa;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+    cursor: pointer;
+  }
+
+  /* 悬停时的卡片高亮浮起状态 */
+  .finding-v-card:hover {
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+    border-left: 4px solid #3273dc; /* 悬停时左侧出现蓝色高亮条 */
+  }
+
+  /* 标题栏区域（始终可见） */
+  .v-card-header {
+    display: flex;
+    align-items: center;
+    padding: 24px 30px;
+  }
+
+  /* 序号 */
+  .v-finding-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #3273dc;
+    margin-right: 24px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  .finding-v-card:hover .v-finding-number {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* 标题文本 */
+  .v-content-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #363636;
+    margin: 0;
+    flex-grow: 1; /* 让标题占据剩余空间，把箭头推到最右边 */
+  }
+
+  /* 右侧的展开指示箭头 */
+  .v-arrow {
+    color: #b5b5b5;
+    transition: transform 0.4s ease;
+  }
+
+  .finding-v-card:hover .v-arrow {
+    color: #3273dc;
+    transform: rotate(180deg); /* 悬停时箭头翻转 */
+  }
+
+  /* * 核心动画区域：使用 Grid 实现高度 0 到 auto 的平滑过渡 
+   * 这比强行指定 max-height 更优雅，不会截断文本
+   */
+  .v-card-body-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .finding-v-card:hover .v-card-body-wrapper {
+    grid-template-rows: 1fr;
+  }
+
+  /* 内部真正存放文字的容器 */
+  .v-card-body-inner {
+    overflow: hidden;
+    padding: 0 30px;
+    opacity: 0;
+    color: #4a4a4a;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    transition: opacity 0.3s ease, padding 0.4s ease;
+  }
+
+  .finding-v-card:hover .v-card-body-inner {
+    opacity: 1;
+    padding-bottom: 24px; /* 展开后撑开底部间距 */
+  }
+
+  /* 移动端适配小调优 */
+  @media (max-width: 768px) {
+    .v-card-header {
+      padding: 16px 20px;
+    }
+    .v-card-body-inner {
+      padding: 0 20px;
+    }
+    .finding-v-card:hover .v-card-body-inner {
+      padding-bottom: 16px;
+    }
+    .v-content-title {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<section class="section">
+  <div class="container is-max-desktop"> <h2 class="title is-3 has-text-centered" style="margin-bottom: 40px;">Findings</h2>
+    
+    <div class="findings-vertical">
+      
+      <div class="finding-v-card">
+        <div class="v-card-header">
+          <div class="v-finding-number">01</div>
+          <h3 class="v-content-title">Search-augmented models outperform offline models across languages.</h3>
+          <i class="fas fa-chevron-down v-arrow"></i>
+        </div>
+        <div class="v-card-body-wrapper">
+          <div class="v-card-body-inner">
+            <p>Among models without web access, <strong>Gemini-3</strong> family achieves the highest accuracy on both Level 1 and Level 2 tasks, significantly outperforming other non-retrieval baselines. However, even the best offline model remains far behind search-augmented systems, highlighting the limitations of purely parametric knowledge in complex visual factuality tasks. Models equipped with search capabilities demonstrate a dramatic performance gain. For instance, <strong>GPT-o3:online</strong> attains an accuracy of <strong>39.2%</strong> on Level 2 tasks, nearly four times higher than the best offline model. This underscores the critical role of external retrieval in handling real-world, time-sensitive queries.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding-v-card">
+        <div class="v-card-header">
+          <div class="v-finding-number">02</div>
+          <h3 class="v-content-title">Multilingual curse remains in visual factuality seeking, where search-augmented models exhibit strong language bias toward English primarily due to fundamental retrieval bottlenecks.</h3>
+          <i class="fas fa-chevron-down v-arrow"></i>
+        </div>
+        <div class="v-card-body-wrapper">
+          <div class="v-card-body-inner">
+            <p>Cross-lingual evaluation reveals a stark disparity: offline models maintain relatively balanced performance, whereas search-enabled models perform significantly better in <strong>English</strong> and <strong>Spanish</strong> than in other languages. For example, GPT-5.2:online scores 40.0% in English but falls below 25% in low-resource languages. This indicates that current multimodal retrieval pipelines are heavily optimized for English-centric web content.</p> 
+          </div>
+        </div>
+      </div>
+
+      <div class="finding-v-card">
+        <div class="v-card-header">
+          <div class="v-finding-number">03</div>
+          <h3 class="v-content-title">Search-augmented models exhibit strong calibration compared to offline models.</h3>
+          <i class="fas fa-chevron-down v-arrow"></i>
+        </div>
+        <div class="v-card-body-wrapper">
+          <div class="v-card-body-inner">
+            <p>Search-augmented models show better calibration compared to their counterparts, especially GPT-o3:online, reaching 37.4 F-score and only slightly below the ideal y=x line, indicating that using the search tool releases overconfidence in visual factuality seeking and underscoring substantial opportunities for improving MLLM calibration.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding-v-card">
+        <div class="v-card-header">
+          <div class="v-finding-number">04</div>
+          <h3 class="v-content-title">Multilingual visual factuality injection suffers from poor cross-lingual generalization, and MCQA training fails to facilitate effective knowledge memorization.</h3>
+          <i class="fas fa-chevron-down v-arrow"></i>
+        </div>
+        <div class="v-card-body-wrapper">
+          <div class="v-card-body-inner">
+            <p>We find that although models exhibit improved memorization of visual factual knowledge, their ability to establish cross-lingual associations remains notably weak, where the corresponding training language significantly outperforms that in other languages. Multilingual visual factuality injection does not generalize well across languages, and substantial gaps between languages persist (>8%). This remains an open challenge that warrants further investigation. Furthermore, we observe that training with the MCQA format contributes minimally to factuality memorization; the model fails to internalize these knowledge entities or establish meaningful associations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="finding-v-card">
+        <div class="v-card-header">
+          <div class="v-finding-number">05</div>
+          <h3 class="v-content-title">The model degrades a lot under linguistic and query style changing, and removing images and flipping also harm visual entity recognition.</h3>
+          <i class="fas fa-chevron-down v-arrow"></i>
+        </div>
+        <div class="v-card-body-wrapper">
+          <div class="v-card-body-inner">
+            <p>Perturbation experiments reveal that vertical flipping causes the most severe drop in accuracy compared to other spatial transformations. Since the dataset focuses on visual entities without physical dynamics, this sensitivity suggests the model does not learn robust, rotation-invariant features. Instead, its recognition capability is anchored to the standard upright views and absolute spatial configurations present in the training data, leading to failure when the input deviates from this fixed layout.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
   <!--BibTex citation -->
